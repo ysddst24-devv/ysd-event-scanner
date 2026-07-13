@@ -1,4 +1,4 @@
-const API_URL = "https://script.google.com/macros/s/AKfycbytBmtgFKFluPh1GBQz6lKUiPJM04RSj2rhYiQTeKVDN8D3u0dVLTwsovqv622AmxtL/exec";
+const API_URL = CONFIG.API_URL;
 
 function showResult(result){
 
