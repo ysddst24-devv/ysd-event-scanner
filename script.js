@@ -58,10 +58,12 @@ const response = await fetch(API_URL,{
 
     }catch(err){
 
-        document.getElementById("result").innerHTML =
-        "<h2 style='color:red'>Connection Error</h2>";
+    console.error("FETCH ERROR:", err);
 
-    }
+    document.getElementById("result").innerHTML =
+    "<h2 style='color:red'>Connection Error</h2><p>" + err + "</p>";
+
+}
 
     setTimeout(()=>{
 
