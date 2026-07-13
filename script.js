@@ -37,16 +37,20 @@ async function onScanSuccess(decodedText){
 
     try{
 
-        const response = await fetch(API_URL,{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                registrationNumber:decodedText,
-                gate:"Main Gate"
-            })
-        });
+        const match = decodedText.match(/Reg-([A-Z0-9-]+)/);
+
+const regNumber = match ? match[1] : decodedText;
+
+const response = await fetch(API_URL,{
+    method:"POST",
+    headers:{
+        "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+        registrationNumber: regNumber,
+        gate:"Main Gate"
+    })
+});
 
         const result = await response.json();
 
