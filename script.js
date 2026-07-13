@@ -32,6 +32,7 @@ function showResult(result){
 }
 
 async function onScanSuccess(decodedText){
+    console.log("RAW QR:", decodedText);
 
     scanner.clear();
 
