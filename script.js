@@ -48,7 +48,7 @@ const response = await fetch(API_URL,{
     },
     body:JSON.stringify({
         registrationNumber: regNumber,
-        gate:"Main Gate"
+        gate: CONFIG.GATE
     })
 });
 
