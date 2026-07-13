@@ -1,4 +1,4 @@
-const API_URL = CONFIG.API_URL;
+const API_URL = "https://ysd-event-scanner-api.ysddst24.workers.dev/scan";
 
 function showResult(result){
 
