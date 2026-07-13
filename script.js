@@ -41,7 +41,8 @@ async function onScanSuccess(decodedText){
         const match = decodedText.match(/REG=([A-Z0-9-]+)/);
 
 const regNumber = match ? match[1] : decodedText.trim();
-
+console.log("EXTRACTED REG:", regNumber);
+        
 const response = await fetch(API_URL,{
     method:"POST",
     headers:{
